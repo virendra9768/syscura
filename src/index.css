@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@700&family=Inter:wght@400;500&display=swap');
+
+  .logo-text {
+    font-family: 'Unbounded', sans-serif;
+  }
+
+  .nav-text {
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* footer */
+  .footer-text {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .footer-link:hover {
+    text-decoration: underline;
+    color: var(--indigo-9);
+  }
+  /* footer */
+
+  /* home */
+  /* .body-text {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .highlight {
+    color: var(--indigo-9);
+  }
+
+  .section-title {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .service-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-card {
+    text-align: center;
+    padding: 1rem;
+    border-radius: var(--radius-3);
+    background-color: var(--gray-2);
+  }
+
+  .testimonial-card {
+    padding: 1rem;
+    border-radius: var(--radius-3);
+    background-color: var(--gray-2);
+    text-align: center;
+  }
+
+  .testimonial-avatar {
+    margin: 0 auto 1rem;
+  } */
+  /* home */

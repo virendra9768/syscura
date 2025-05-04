@@ -1,34 +1,9 @@
 import { Box, Flex, Text, Link, Separator, Grid } from "@radix-ui/themes";
 import { LightningBoltIcon } from "@radix-ui/react-icons";
 
-// Add custom global styles for better font styling
-const globalStyles = `
-  .footer-text {
-    font-family: 'Inter', sans-serif;
-    color: #666;
-  }
-
-  .footer-link {
-    font-family: 'Inter', sans-serif;
-    color: #555;
-    transition: color 0.3s ease;
-  }
-
-  .footer-link:hover {
-    color: #6366f1;
-    text-decoration: underline;
-  }
-
-  .logo-text {
-    font-family: 'Unbounded', sans-serif;
-    color: #1f2937;
-  }
-`;
-
 export default function Footer() {
   return (
     <>
-      <style>{globalStyles}</style>
       <Box
         as="footer"
         px="6"
@@ -46,7 +21,7 @@ export default function Footer() {
         <Box
           height="2px"
           style={{
-            background: "linear-gradient(to right, #6366f1, #818cf8)",
+            background: "linear-gradient(to right, #000, #000)",
             borderRadius: "999px",
             marginBottom: "16px",
           }}
@@ -55,7 +30,7 @@ export default function Footer() {
           {/* Logo + Tagline */}
           <Flex direction="column" gap="2">
             <Flex align="center" gap="2">
-              <LightningBoltIcon width="22" height="22" color="#6366f1" />
+              <LightningBoltIcon width="22" height="22" color="#000" />
               <Text size="5" weight="bold" className="logo-text">
                 Syscura
               </Text>

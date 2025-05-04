@@ -1,5 +1,3 @@
-// components/WhatWeDeliveredSection.tsx
-
 import { Box, Card, Heading, Text, Flex } from "@radix-ui/themes";
 import { CheckCircledIcon } from "@radix-ui/react-icons";
 
@@ -30,60 +28,72 @@ const deliveries = [
   },
 ];
 
+const cardColors = [
+  "#1e293b", "#1f2a37", "#22303c", "#2e2a47", "#2b2d42", "#2c2c2c",
+];
+
 export function WhatWeDeliveredSection() {
   return (
-    <Box py="8" px="6" style={{ backgroundColor: "var(--gray-a2)" }}>
-      <Heading align="center" size="6" mb="2">
+    <Box py="8" px="6" style={{ backgroundColor: "#0f172a" }}>
+      <Heading align="center" size="6" mb="3" style={{ color: "#f1f5f9" }}>
         What We Delivered
       </Heading>
 
-      {/* Updated Subtext with the same styling as Services Section */}
-      <Text
-        align="center"
-        size="4"
+      <Box
         style={{
-          opacity: 0.85,
-          fontStyle: "italic",
-          marginBottom: "3rem", // More space between tagline and services
-          maxWidth: "700px",
-          marginInline: "auto",
-          padding: "0 1rem", // Added padding to prevent overflow
+          maxWidth: "1080px",
+          margin: "0 auto",
+          padding: "0 1rem",
         }}
       >
-        Tangible results, tailored solutions, and real business impact.
-      </Text>
+        <Text
+          size="4"
+          style={{
+            opacity: 0.85,
+            fontStyle: "italic",
+            marginBottom: "2.5rem",
+            color: "#cbd5e1",
+            maxWidth: "700px",
+          }}
+        >
+          Tangible results, tailored solutions, and real business impact.
+        </Text>
 
-      <Flex wrap="wrap" justify="center" gap="5">
-        {deliveries.map((item, idx) => (
-          <Card
-            key={idx}
-            variant="classic"
-            style={{
-              width: "320px",
-              padding: "1.5rem",
-              boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
-              transition: "transform 0.2s",
-              marginBottom: "2rem", // Adding some bottom space between cards
-            }}
-            onMouseEnter={(e) =>
-              (e.currentTarget.style.transform = "translateY(-4px)")
-            }
-            onMouseLeave={(e) =>
-              (e.currentTarget.style.transform = "translateY(0)")
-            }
-          >
-            <Flex align="center" gap="3" mb="3">
-              <CheckCircledIcon width="20" height="20" color="green" />
-              <Text size="4" weight="bold">
-                {item.title}
+        <Box height="2rem" />
+
+        <Flex wrap="wrap" gap="5">
+          {deliveries.map((item, idx) => (
+            <Card
+              key={idx}
+              style={{
+                backgroundColor: cardColors[idx % cardColors.length],
+                width: "320px",
+                borderRadius: "1rem",
+                padding: "1.5rem",
+                color: "#f8fafc",
+                boxShadow: "0 4px 12px rgba(0,0,0,0.4)",
+                transition: "transform 0.2s ease",
+              }}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.transform = "translateY(-4px)")
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.transform = "translateY(0)")
+              }
+            >
+              <Flex align="center" gap="3" mb="3">
+                <CheckCircledIcon width="22" height="22" color="#10b981" />
+                <Text size="4" weight="bold" style={{ color: "#ffffff" }}>
+                  {item.title}
+                </Text>
+              </Flex>
+              <Text size="3" style={{ color: "#e2e8f0" }}>
+                {item.description}
               </Text>
-            </Flex>
-            <Text size="3" color="gray">
-              {item.description}
-            </Text>
-          </Card>
-        ))}
-      </Flex>
+            </Card>
+          ))}
+        </Flex>
+      </Box>
     </Box>
   );
 }

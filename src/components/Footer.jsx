@@ -1,40 +1,48 @@
 import { Box, Flex, Text, Link, Separator, Grid } from "@radix-ui/themes";
 import { LightningBoltIcon } from "@radix-ui/react-icons";
 
-// Include fonts and styles just like header
-// const globalStyles = `
-//   @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@700&family=Inter:wght@400;500&display=swap');
+// Add custom global styles for better font styling
+const globalStyles = `
+  .footer-text {
+    font-family: 'Inter', sans-serif;
+    color: #666;
+  }
 
-//   .logo-text {
-//     font-family: 'Unbounded', sans-serif;
-//   }
+  .footer-link {
+    font-family: 'Inter', sans-serif;
+    color: #555;
+    transition: color 0.3s ease;
+  }
 
-//   .footer-text {
-//     font-family: 'Inter', sans-serif;
-//   }
+  .footer-link:hover {
+    color: #6366f1;
+    text-decoration: underline;
+  }
 
-//   .footer-link:hover {
-//     text-decoration: underline;
-//     color: var(--indigo-9);
-//   }
-// `;
+  .logo-text {
+    font-family: 'Unbounded', sans-serif;
+    color: #1f2937;
+  }
+`;
 
 export default function Footer() {
   return (
     <>
-      {/* <style>{globalStyles}</style> */}
+      <style>{globalStyles}</style>
       <Box
         as="footer"
         px="6"
         pt="8"
         pb="5"
         style={{
-          background: "rgba(255, 255, 255, 0.7)",
-          backdropFilter: "blur(12px)",
-          borderTop: "1px solid var(--gray-4)",
+          background: "rgba(255, 255, 255, 0.9)",
+          backdropFilter: "blur(15px)",
+          borderTop: "1px solid #d1d5db",
+          borderRadius: "8px 8px 0 0", // Rounded corners for the footer
+          boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
         }}
       >
-        {/* Top Section */}
+        {/* Top Section with gradient line */}
         <Box
           height="2px"
           style={{
@@ -47,7 +55,7 @@ export default function Footer() {
           {/* Logo + Tagline */}
           <Flex direction="column" gap="2">
             <Flex align="center" gap="2">
-              <LightningBoltIcon width="22" height="22" />
+              <LightningBoltIcon width="22" height="22" color="#6366f1" />
               <Text size="5" weight="bold" className="logo-text">
                 Syscura
               </Text>

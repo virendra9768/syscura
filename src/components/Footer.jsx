@@ -43,27 +43,18 @@ export default function Footer() {
           {/* Navigation Links */}
           <Grid columns={{ initial: "2", sm: "3" }} gap="4" className="footer-text">
             <Box>
-              <Text weight="medium" size="3" mb="2">Product</Text>
-              <Flex direction="column" gap="1">
-                <Link className="footer-link" href="#">Features</Link>
-                <Link className="footer-link" href="#">Pricing</Link>
-                <Link className="footer-link" href="#">Security</Link>
-              </Flex>
-            </Box>
-            <Box>
               <Text weight="medium" size="3" mb="2">Company</Text>
               <Flex direction="column" gap="1">
                 <Link className="footer-link" href="#">About Us</Link>
-                <Link className="footer-link" href="#">Careers</Link>
+                <Link className="footer-link" href="#">Services</Link>
+                <Link className="footer-link" href="#">Portfolio</Link>
                 <Link className="footer-link" href="#">Contact</Link>
               </Flex>
             </Box>
             <Box>
               <Text weight="medium" size="3" mb="2">Resources</Text>
               <Flex direction="column" gap="1">
-                <Link className="footer-link" href="#">Docs</Link>
                 <Link className="footer-link" href="#">Blog</Link>
-                <Link className="footer-link" href="#">Support</Link>
               </Flex>
             </Box>
           </Grid>

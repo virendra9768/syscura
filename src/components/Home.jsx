@@ -14,6 +14,7 @@ import { BannerSection } from "./BannerSection";
 import { WhatWeDeliveredSection } from "./WhatWeDeliveredSection";
 import Header from "./Header";
 import Footer from "./Footer";
+import { OurOfficesSection } from "./OurOfficesSection";
 
 export default function Home() {
   return (
@@ -33,6 +34,9 @@ export default function Home() {
 
           {/* What We Delivered */}
           <WhatWeDeliveredSection />
+
+          {/* Our Offices */}
+          {/* <OurOfficesSection /> */}
         {/* </Container> */}
       </Box>
       <Footer />

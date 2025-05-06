@@ -206,7 +206,7 @@ export function TestimonialsSection() {
                 >
                   <Flex direction="column" gap="3">
                     <Text size="3" color="gray">
-                      “{testimonial.quote}”
+                      {testimonial.quote}
                     </Text>
                     <Flex align="center" direction="column" gap="3" mt="3">
                       <Avatar

@@ -70,15 +70,6 @@ const services = [
   },
 ];
 
-const cardColors = [
-  "#1e293b", // slate-800 (cool dark blue-gray)
-  "#1f2a37", // custom dark blue
-  "#2e2a47", // purple-gray
-  "#2b2d42", // indigo-dark
-  "#22303c", // dark teal
-  "#2c2c2c", // neutral gray-black
-];
-
 export const ServicesSection = () => {
   return (
     <Section
@@ -153,41 +144,43 @@ export const ServicesSection = () => {
         </Text>
 
         <Box height="2rem" />
-
-        <Grid columns={{ initial: "1", sm: "2", md: "3" }} gap="5">
-          {services.map((service, idx) => (
-            <Card
-            key={idx}
-            style={{
-              backgroundColor: cardColors[idx % cardColors.length],
-              borderRadius: "1rem",
-              padding: "1.5rem",
-              color: "#f8fafc", // very light text
-              transition: "transform 0.2s ease",
-              boxShadow: "0 4px 12px rgba(0,0,0,0.4)",
-            }}
-            onMouseOver={(e) => {
-              e.currentTarget.style.transform = "translateY(-5px)";
-            }}
-            onMouseOut={(e) => {
-              e.currentTarget.style.transform = "translateY(0)";
-            }}
-          >
-            <Flex direction="column" gap="3">
-              <Box style={{ fontSize: "1.75rem", color: "#ffffffcc" }}>
-                {service.icon}
+          <Grid columns={{ initial: "1", sm: "2", md: "3" }} style={{ gap: "2rem" }}>
+            {services.map((service, idx) => (
+              <Box key={idx} style={{ marginBottom: "2rem" }}> {/* Margin between rows */}
+                <Card
+                  variant="ghost"
+                  style={{
+                    borderRadius: "1rem",
+                    padding: "1.5rem",
+                    transition: "transform 0.2s ease",
+                    backgroundColor: "rgba(255, 255, 255, 0.05)",
+                    backdropFilter: "blur(12px)",
+                    border: "1px solid rgba(255, 255, 255, 0.1)",
+                    boxShadow: "0 10px 30px rgba(0, 0, 0, 0.4)",
+                    color: "#f8fafc",
+                  }}
+                  onMouseOver={(e) => {
+                    e.currentTarget.style.transform = "translateY(-5px)";
+                  }}
+                  onMouseOut={(e) => {
+                    e.currentTarget.style.transform = "translateY(0)";
+                  }}
+                >
+                  <Flex direction="column" gap="3">
+                    <Box style={{ fontSize: "1.75rem", color: "#ffffffcc" }}>
+                      {service.icon}
+                    </Box>
+                    <Heading size="4" style={{ color: "#ffffff" }}>
+                      {service.title}
+                    </Heading>
+                    <Text size="3" style={{ color: "#e5e7eb" }}>
+                      {service.description}
+                    </Text>
+                  </Flex>
+                </Card>
               </Box>
-              <Heading size="4" style={{ color: "#ffffff" }}>
-                {service.title}
-              </Heading>
-              <Text size="3" style={{ color: "#e5e7eb" }}>
-                {service.description}
-              </Text>
-            </Flex>
-          </Card>
-          
-          ))}
-        </Grid>
+            ))}
+          </Grid>
       </Box>
     </Section>
   );
